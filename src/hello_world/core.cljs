@@ -2,7 +2,8 @@
   (:require
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
-   [hello-world.api :as api]))
+   [hello-world.api :as api]
+   ))
 
 ;; define your app data so that it doesn't get over-written on reload
 (def !app-state (atom {:today-temp nil, :ytd-temp 900}))

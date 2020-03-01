@@ -2,7 +2,7 @@
 
 (def request-url "https://api.openweathermap.org/data/2.5/weather?id=")
 
-(def api-key "553fe69d703020a53e9443c6f71bd1db")
+(def api-key "a241533f43495fc655870b43a8f9d457")
 
 (defn build-request [city-id]
   (str request-url city-id "&appid=" api-key))

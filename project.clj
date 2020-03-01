@@ -8,7 +8,8 @@
 
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.10.520"]
-                 [reagent "0.8.1"]]
+                 [reagent "0.8.1"]
+                 [clj-http "3.10.0"]]
 
   :source-paths ["src"]
 
@@ -21,4 +22,4 @@
                                   [com.bhauman/rebel-readline-cljs "0.1.4"]]
                    }}
   
-  :plugins [[lein-cljfmt "0.6.6"]])
+  :plugins [[lein-cljfmt "0.6.6"][clj-time "0.15.2"]])
