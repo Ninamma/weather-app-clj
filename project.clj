@@ -9,7 +9,8 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.10.520"]
                  [reagent "0.8.1"]
-                 [clj-http "3.10.0"]]
+                 [clj-http "3.10.0"]
+                 [cheshire "5.10.0"]]
 
   :source-paths ["src"]
 

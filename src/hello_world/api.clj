@@ -12,12 +12,13 @@
   (int (/ (- (c/to-long (l/local-now)) 86400000) 1000)))
 
 (defn build-ytdrequest "builds request url for yesterdays daily info" [coords]
-  (str request-url api-key "/" coords "," ytdtime "?exclude=currently,hourly"))
+  (str request-url api-key "/" coords "," ytdtime "?exclude=currently,hourly&units=si"))
 
 (def london-coords (str 51.4786 "," -0.158))
 
 (println (build-ytdrequest london-coords))
-(client/get (build-ytdrequest london-coords))
+(clojure.pprint/pprint (get-in (client/get (build-ytdrequest london-coords) {:as :json})
+                               [:body :daily :data 0 :apparentTemperatureHigh]))
 ; (defn fetch+ [request]
 ;   (-> (js/fetch request)
 ;       (.then #(.json %))
